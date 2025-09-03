@@ -34,3 +34,40 @@ a {
 .btn:disabled {
     @apply text-neutral-400 bg-neutral-700;
 }
+
+/* Geocities aesthetic overrides */
+@layer base {
+  body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    background-color: #000080;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #000080 0,
+      #000080 10px,
+      #4169e1 10px,
+      #4169e1 20px
+    );
+    color: #ffff00;
+    margin: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #ff00ff;
+    text-decoration: underline #ff00ff dashed;
+  }
+  a {
+    color: #00ffff;
+  }
+}
+
+@layer components {
+  .marquee-header {
+    display: block;
+    width: 100%;
+    background-color: #ffff00;
+    color: #0000ff;
+    font-weight: bold;
+    text-align: center;
+    border: 2px dashed #ff00ff;
+    padding: 5px 0;
+  }
+}
