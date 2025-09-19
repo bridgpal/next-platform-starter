@@ -6,26 +6,30 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'grid-pattern': "linear-gradient(to bottom, theme('colors.neutral.950 / 0%'), theme('colors.neutral.950 / 100%')), url('/images/noise.png')"
+                'grid-pattern': "url('/images/grid-bg.svg')"
             },
             colors: {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['"Comic Sans MS"', 'Comic Sans', 'cursive', ...defaultTheme.fontFamily.sans]
             }
         }
     },
     daisyui: {
         themes: [
             {
-                lofi: {
-                    ...require('daisyui/src/theming/themes')['lofi'],
-                    primary: '#2bdcd2',
-                    'primary-content': '#171717',
-                    secondary: '#016968',
-                    info: '#2bdcd2',
-                    'info-content': '#171717',
+                geocities: {
+                    primary: '#ff00ff',
+                    'primary-content': '#000000',
+                    secondary: '#00ffff',
+                    'secondary-content': '#000000',
+                    accent: '#ffff00',
+                    'accent-content': '#000000',
+                    neutral: '#000000',
+                    'neutral-content': '#ffffff',
+                    'base-100': '#000000',
+                    'base-content': '#ffffff'
                 }
             }
         ]

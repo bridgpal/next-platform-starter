@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/comic-sans-ms');
 
 @tailwind base;
 @tailwind components;
@@ -31,6 +31,20 @@ a {
     @apply mb-3;
 }
 
-.btn:disabled {
-    @apply text-neutral-400 bg-neutral-700;
+/* Blink effect for marquee text */
+@keyframes blink {
+  to { visibility: hidden; }
+}
+.blink {
+  animation: blink 1s steps(2, start) infinite;
+}
+
+/* Geocities marquee styling */
+marquee {
+  background-color: var(--primary);
+  color: var(--primary-content);
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 2px solid var(--secondary);
+  display: block;
 }
