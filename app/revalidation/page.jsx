@@ -56,26 +56,42 @@ export default async function Page() {
 }
 
 async function RandomWikiArticle() {
-    const randomWiki = await fetch(randomWikiUrl, {
-        next: { revalidate: revalidateTTL, tags: [tagName] }
-    });
+    try {
+        const randomWiki = await fetch(randomWikiUrl, {
+            next: { revalidate: revalidateTTL, tags: [tagName] }
+        });
 
-    const content = await randomWiki.json();
-    let extract = content.extract;
-    if (extract.length > maxExtractLength) {
-        extract = extract.slice(0, extract.slice(0, maxExtractLength).lastIndexOf(' ')) + ' [...]';
-    }
+        if (!randomWiki.ok) {
+             throw new Error(`Status: ${randomWiki.status}`);
+        }
 
-    return (
-        <div className="bg-white text-neutral-600 card my-6 max-w-2xl">
-            <div className="card-title text-3xl px-8 pt-8">{content.title}</div>
-            <div className="card-body py-4">
-                <div className="text-lg font-bold">{content.description}</div>
-                <p className="italic">{extract}</p>
-                <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>
-                    From Wikipedia
-                </a>
+        const content = await randomWiki.json();
+        let extract = content.extract;
+        if (extract.length > maxExtractLength) {
+            extract = extract.slice(0, extract.slice(0, maxExtractLength).lastIndexOf(' ')) + ' [...]';
+        }
+
+        return (
+            <div className="bg-white text-neutral-600 card my-6 max-w-2xl">
+                <div className="card-title text-3xl px-8 pt-8">{content.title}</div>
+                <div className="card-body py-4">
+                    <div className="text-lg font-bold">{content.description}</div>
+                    <p className="italic">{extract}</p>
+                    <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>
+                        From Wikipedia
+                    </a>
+                </div>
             </div>
-        </div>
-    );
+        );
+    } catch (error) {
+        console.error('Failed to fetch Wikipedia article:', error);
+        return (
+            <div className="bg-white text-neutral-600 card my-6 max-w-2xl">
+                <div className="card-body py-4">
+                    <div className="text-lg font-bold">Error</div>
+                    <p className="italic">Failed to load random article from Wikipedia.</p>
+                </div>
+            </div>
+        );
+    }
 }
