@@ -31,6 +31,12 @@ a {
     @apply mb-3;
 }
 
+@layer components {
+  .btn {
+    @apply rounded-full;
+  }
+}
+
 .btn:disabled {
     @apply text-neutral-400 bg-neutral-700;
 }
