@@ -37,7 +37,7 @@ export function FeedbackForm() {
                 <form
                     name="feedback"
                     onSubmit={handleFormSubmit}
-                    className="text-black flex flex-col gap-3 align-center"
+                    className="flex flex-col gap-3 align-center"
                 >
                     <input type="hidden" name="form-name" value="feedback" />
                     <input name="name" type="text" placeholder="Name" required className="input input-bordered" />
