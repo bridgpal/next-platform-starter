@@ -25,7 +25,7 @@ export function RandomQuote() {
     }, []);
 
     return (
-        <div className="bg-white card text-neutral-600">
+        <div className="bg-neutral-200 card text-neutral-700">
             <div className="card-body">
                 {quote ? (
                     <>
@@ -34,7 +34,7 @@ export function RandomQuote() {
                             {' '}
                             - {quote.playedBy} as {quote.character} in &ldquo;{quote.film}&rdquo; ({quote.year})
                         </p>
-                        <p className="pt-2.5 mt-2.5 border-t border-dashed text-secondary border-neutral-200">
+                        <p className="pt-2.5 mt-2.5 border-t border-dashed text-red-700 border-neutral-300">
                             <span className="text-sm italic">
                                 loaded at {time}. <a href={quote.dataSource}>Original data source.</a>
                             </span>
