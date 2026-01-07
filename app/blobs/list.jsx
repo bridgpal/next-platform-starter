@@ -25,7 +25,7 @@ export function StoredBlobsList({ lastMutationTime }) {
     return (
         <div className="flex flex-col items-center justify-center gap-3">
             <div className="text-lg font-bold h-6">Objects in Blob Store</div>
-            <div className="flex flex-col gap-1 w-full bg-white text-neutral-900 min-h-56 card">
+            <div className="flex flex-col gap-1 w-full bg-neutral-200 text-neutral-900 min-h-56 card">
                 <div className="card-body text-md">
                     {!keys?.length ? (
                         <span>Please upload some shapes!</span>

@@ -6,7 +6,7 @@
 
 @layer base {
     :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
+        @apply px-1 py-0.5 font-mono rounded bg-neutral-800 text-red-300;
         font-size: 0.9em;
     }
 
@@ -32,5 +32,5 @@ a {
 }
 
 .btn:disabled {
-    @apply text-neutral-400 bg-neutral-700;
+    @apply text-neutral-400 bg-neutral-600;
 }
