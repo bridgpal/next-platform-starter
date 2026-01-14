@@ -1,12 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+    html {
+        filter: grayscale(100%);
+    }
+
+    body {
+        @apply font-mono;
+    }
+
     :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
+        @apply px-1 py-0.5 font-mono rounded bg-neutral-200 text-neutral-800;
         font-size: 0.9em;
     }
 

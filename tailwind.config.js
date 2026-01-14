@@ -12,20 +12,26 @@ module.exports = {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                mono: ['Fira Code', ...defaultTheme.fontFamily.mono]
             }
         }
     },
     daisyui: {
         themes: [
             {
-                lofi: {
-                    ...require('daisyui/src/theming/themes')['lofi'],
-                    primary: '#2bdcd2',
-                    'primary-content': '#171717',
-                    secondary: '#016968',
-                    info: '#2bdcd2',
-                    'info-content': '#171717',
+                bw: {
+                    ...require('daisyui/src/theming/themes')['light'],
+                    primary: '#000000',
+                    'primary-content': '#ffffff',
+                    secondary: '#000000',
+                    'secondary-content': '#ffffff',
+                    accent: '#000000',
+                    'accent-content': '#ffffff',
+                    neutral: '#ffffff',
+                    'neutral-content': '#000000',
+                    'base-100': '#ffffff',
+                    'base-content': '#000000',
                 }
             }
         ]
