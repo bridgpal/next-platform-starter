@@ -14,7 +14,7 @@ const navItems = [
 
 export function Header() {
     return (
-        <nav className="sticky top-0 z-50 w-full bg-black border-b border-gray-800">
+        <nav className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-md border-b border-gray-200">
             <div className="flex flex-wrap items-center gap-4 py-4 px-6 sm:px-12 max-w-5xl mx-auto">
                 <Link href="/">
                     <Image src={netlifyLogo} alt="Netlify logo" />
@@ -25,7 +25,7 @@ export function Header() {
                             <li key={index}>
                                 <Link
                                     href={item.href}
-                                    className="inline-block px-1.5 py-1 transition hover:opacity-80 sm:px-3 sm:py-2"
+                                    className="inline-block px-1.5 py-1 transition hover:opacity-80 sm:px-3 sm:py-2 text-gray-800"
                                 >
                                     {item.linkText}
                                 </Link>
@@ -39,7 +39,7 @@ export function Header() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Image src={githubLogo} alt="GitHub logo" className="w-7" />
+                        <Image src={githubLogo} alt="GitHub logo" className="w-7 invert" />
                     </Link>
                 </div>
             </div>
