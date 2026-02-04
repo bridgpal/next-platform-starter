@@ -14,7 +14,7 @@ const navItems = [
 
 export function Header() {
     return (
-        <nav className="sticky top-0 z-50 w-full bg-black border-b border-gray-800">
+        <nav className="sticky top-0 z-50 w-full bg-teal-600 border-b border-teal-700">
             <div className="flex flex-wrap items-center gap-4 py-4 px-6 sm:px-12 max-w-5xl mx-auto">
                 <Link href="/">
                     <Image src={netlifyLogo} alt="Netlify logo" />
