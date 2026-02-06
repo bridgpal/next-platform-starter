@@ -8,10 +8,10 @@ export const metadata = {
 };
 
 const explainer = `
-[Netlify Blobs](https://docs.netlify.com/blobs/overview/) provides an object store for any kind of data, be it JSON, binary, 
+[Netlify Blobs](https://docs.netlify.com/blobs/overview/) provides an object store for any kind of data, be it JSON, binary,
 or [really](https://mk.gg/projects/chalkstream) anything else ([really!](https://mk.gg/projects/turbofan)). In this example, the blob store is used to **hold the data of user-generated random blobby shapes**.
 
-Using the blob store is basically zero-config. Below is a Next.js Server Action to upload data (see \`app/blobs/actions.js\`). 
+Using the blob store is basically zero-config. Below is a Next.js Server Action to upload data (see \`app/blobs/actions.js\`).
 When deployed to Netlify, the Server Action is run by serverless functions, and all context required for the blob service is set-up automatically.
 
 ~~~js
@@ -31,7 +31,7 @@ Choose any existing object to view it.
 `;
 
 const uploadDisabledText = `
-User uploads are disabled in this site. To run your own and try it out: 
+User uploads are disabled in this site. To run your own and try it out:
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter">
 <img src="https://www.netlify.com/img/deploy/button.svg" style="display: inline;" alt="Deploy to Netlify" />
 </a>
@@ -39,21 +39,30 @@ User uploads are disabled in this site. To run your own and try it out:
 
 export default async function Page() {
     return (
-        <>
-            <section className="flex flex-col gap-6 sm:gap-8">
+        <div className="flex flex-col gap-12">
+            {/* Page Header */}
+            <section className="flex flex-col gap-6 pt-8">
                 <ContextAlert
                     addedChecksFunction={(ctx) => {
                         return uploadDisabled ? uploadDisabledText : null;
                     }}
                 />
+                <div className="flex items-center gap-3">
+                    <div className="w-8 h-px bg-vermillion" />
+                    <span className="text-2xs uppercase tracking-[0.2em] text-cream/50 font-medium">
+                        Object Storage
+                    </span>
+                </div>
                 <h1>Blobs x Blobs</h1>
             </section>
+
+            {/* Content */}
             {!!getNetlifyContext() && (
                 <div className="flex flex-col gap-8">
                     <Markdown content={explainer} />
                     <ShapeEditor />
                 </div>
             )}
-        </>
+        </div>
     );
 }

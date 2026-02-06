@@ -1,10 +1,34 @@
-export function Alert({ children, className }) {
-    return (
-        <div className={['alert alert-info', className].join(' ')}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
-                <path d="M12 20.016q3.281 0 5.648-2.367t2.367-5.648-2.367-5.648-5.648-2.367-5.648 2.367-2.367 5.648 2.367 5.648 5.648 2.367zM12 2.016q4.125 0 7.055 2.93t2.93 7.055-2.93 7.055-7.055 2.93-7.055-2.93-2.93-7.055 2.93-7.055 7.055-2.93zM11.016 6.984h1.969v6h-1.969v-6zM11.016 15h1.969v2.016h-1.969v-2.016z"></path>
+export function Alert({ children, className, variant = 'info' }) {
+    const variants = {
+        info: 'alert-brutal alert-brutal-info',
+        warning: 'alert-brutal border-yellow-500',
+        error: 'alert-brutal border-vermillion',
+    };
+
+    const icons = {
+        info: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-cream/70 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            {children}
+        ),
+        warning: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-yellow-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+        ),
+        error: (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-vermillion shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        ),
+    };
+
+    return (
+        <div className={[variants[variant], className].filter(Boolean).join(' ')}>
+            {icons[variant]}
+            <div className="flex-1 text-sm text-cream/70">
+                {children}
+            </div>
         </div>
     );
 }
