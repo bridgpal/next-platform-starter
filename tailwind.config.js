@@ -12,7 +12,7 @@ module.exports = {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['Merriweather', ...defaultTheme.fontFamily.serif]
             }
         }
     },
@@ -21,11 +21,11 @@ module.exports = {
             {
                 lofi: {
                     ...require('daisyui/src/theming/themes')['lofi'],
-                    primary: '#2bdcd2',
-                    'primary-content': '#171717',
-                    secondary: '#016968',
-                    info: '#2bdcd2',
-                    'info-content': '#171717',
+                    primary: '#f97316',
+                    'primary-content': '#000000',
+                    secondary: '#c2410c',
+                    info: '#f97316',
+                    'info-content': '#000000',
                 }
             }
         ]
