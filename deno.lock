@@ -1,0 +1,38 @@
+{
+  "version": "5",
+  "redirects": {
+    "https://esm.sh/@mixmark-io/domino@^2.2.0?target=denonext": "https://esm.sh/@mixmark-io/domino@2.2.0?target=denonext"
+  },
+  "remote": {
+    "https://edge.netlify.com/": "fd941d61d88673d5f28aab283fb86fcc50f08a3bc80ee5470498fcfa88c65cfb",
+    "https://edge.netlify.com/bootstrap/config.ts": "6a2ce0e544e15e8f8883a5c18da5948e37fd0f2619f68cb31f3af53c51817025",
+    "https://edge.netlify.com/bootstrap/context.ts": "e97240232121e2f369f6546ce961490f34d961ea1ea54be3ff09633e3f08373f",
+    "https://edge.netlify.com/bootstrap/cookie.ts": "8b0baae708989ca183c6f3b4ab3d029e6abcbc2e43f93edeb0ff447b3bbc3a05",
+    "https://edge.netlify.com/bootstrap/edge_function.ts": "b8253e86aa83c67341f5cfedeba5049d77fbf84dcab7eceff7566b7728ae9b39",
+    "https://edge.netlify.com/bootstrap/globals/types.ts": "eaa6148ded3121d8dee62dd91c86e7fe76601df0f3ca8d7962243a30f4c8935f",
+    "https://esm.sh/@mixmark-io/domino@2.2.0/denonext/domino.mjs": "95e4575255c7b21241dd8dcc66df5e820a92dcc82a7b72cc0f2757559f267ad7",
+    "https://esm.sh/@mixmark-io/domino@2.2.0?target=denonext": "938f0343bd6cd34f0e5267549a8621b222fcb34fb853a92135c8a14dc5aa5618",
+    "https://esm.sh/turndown@7.2.0": "c51cae7fc0858d7a3e2bb3abe1cc974e75d35b6fb8776dc6aded046d778e980d",
+    "https://esm.sh/turndown@7.2.0/denonext/turndown.mjs": "da88bdb387d69e378f2f2da2805ea2bf1c9edb65361400ac57e0c0ad8c426152"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@netlify/blobs@^8.0.1",
+        "npm:autoprefixer@^10.4.18",
+        "npm:blobshape@1",
+        "npm:bright@~0.8.5",
+        "npm:daisyui@^4.12.8",
+        "npm:eslint-config-next@14.2.14",
+        "npm:eslint@8.57.1",
+        "npm:markdown-to-jsx@^7.4.5",
+        "npm:next@14.2.14",
+        "npm:postcss@^8.4.36",
+        "npm:react-dom@18.3.1",
+        "npm:react@18.3.1",
+        "npm:tailwindcss@^3.4.1",
+        "npm:unique-names-generator@^4.7.1"
+      ]
+    }
+  }
+}
