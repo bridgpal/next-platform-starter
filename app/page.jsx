@@ -3,6 +3,7 @@ import { Card } from 'components/card';
 import { RandomQuote } from 'components/random-quote';
 import { Markdown } from 'components/markdown';
 import { ContextAlert } from 'components/context-alert';
+import { ContactForm } from 'components/contact-form';
 import { getNetlifyContext } from 'utils';
 
 const cards = [
@@ -51,6 +52,15 @@ export default function Page() {
                 <Markdown content={preDynamicContentExplainer} />
                 <RandomQuote />
                 <Markdown content={postDynamicContentExplainer} />
+            </section>
+            <section className="flex flex-col gap-4">
+                <div className="max-w-2xl">
+                    <h2 className="text-3xl font-bold tracking-tight">Let’s talk</h2>
+                    <p className="text-lg text-orange-100">
+                        Share a quick note and the team will follow up with answers, ideas, or a demo.
+                    </p>
+                </div>
+                <ContactForm />
             </section>
             {/* !!cards?.length && <CardsGrid cards={cards} /> */}
         </main>
