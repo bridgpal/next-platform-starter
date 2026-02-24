@@ -4,6 +4,7 @@ import netlifyLogo from 'public/netlify-logo.svg';
 import githubLogo from 'public/images/github-mark-white.svg';
 
 const navItems = [
+    { linkText: 'About', href: '/about' },
     { linkText: 'Home', href: '/' },
     { linkText: 'Revalidation', href: '/revalidation' },
     { linkText: 'Image CDN', href: '/image-cdn' },
@@ -14,7 +15,7 @@ const navItems = [
 
 export function Header() {
     return (
-        <nav className="sticky top-0 z-50 w-full bg-teal-600 border-b border-teal-700">
+        <nav className="sticky top-0 z-50 w-full bg-black border-b border-neutral-900 text-white">
             <div className="flex flex-wrap items-center gap-4 py-4 px-6 sm:px-12 max-w-5xl mx-auto">
                 <Link href="/">
                     <Image src={netlifyLogo} alt="Netlify logo" />
@@ -39,7 +40,7 @@ export function Header() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Image src={githubLogo} alt="GitHub logo" className="w-7" />
+                        <Image src={githubLogo} alt="GitHub logo" className="w-7 invert" />
                     </Link>
                 </div>
             </div>
