@@ -40,9 +40,9 @@ export function FeedbackForm() {
                     className="text-black flex flex-col gap-3 align-center"
                 >
                     <input type="hidden" name="form-name" value="feedback" />
-                    <input name="name" type="text" placeholder="Name" required className="input input-bordered" />
-                    <input name="email" type="text" placeholder="Email (optional)" className="input input-bordered" />
-                    <input name="message" type="text" placeholder="Message" required className="input input-bordered" />
+                    <input name="name" type="text" placeholder="Name" required className="input input-bordered border-3 border-black" />
+                    <input name="email" type="text" placeholder="Email (optional)" className="input input-bordered border-3 border-black" />
+                    <input name="message" type="text" placeholder="Message" required className="input input-bordered border-3 border-black" />
                     <button className="btn btn-primary" type="submit" disabled={status === 'pending'}>
                         Submit
                     </button>
