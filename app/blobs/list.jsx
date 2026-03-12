@@ -24,8 +24,8 @@ export function StoredBlobsList({ lastMutationTime }) {
 
     return (
         <div className="flex flex-col items-center justify-center gap-3">
-            <div className="text-lg font-bold h-6">Objects in Blob Store</div>
-            <div className="flex flex-col gap-1 w-full bg-white text-neutral-900 min-h-56 card">
+            <div className="text-lg font-bold font-serif h-6">Objects in Blob Store</div>
+            <div className="flex flex-col gap-1 w-full bg-white text-black min-h-56 card">
                 <div className="card-body text-md">
                     {!keys?.length ? (
                         <span>Please upload some shapes!</span>
@@ -55,9 +55,9 @@ export function StoredBlobsList({ lastMutationTime }) {
 function BlobPreview({ data }) {
     const fullBlobData = generateBlob(data); // Recreates the SVG path by the existing parameters
     return (
-        <div className="mt-4 lg:mx-16 border border-neutral-800 rounded">
-            <div className="p-2 text-center">{data.name}</div>
-            <div className="bg-neutral-800 text-neutral-100 p-2 font-mono">{JSON.stringify(data, null, ' ')}</div>
+        <div className="mt-4 lg:mx-16 border-3 border-black shadow-brutal">
+            <div className="p-2 text-center font-serif font-bold">{data.name}</div>
+            <div className="bg-black text-cream p-2 font-mono">{JSON.stringify(data, null, ' ')}</div>
             <ShapeRenderer svgPath={fullBlobData.svgPath} colors={fullBlobData.parameters.colors} />
         </div>
     );

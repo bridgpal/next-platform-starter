@@ -14,18 +14,18 @@ const navItems = [
 
 export function Header() {
     return (
-        <nav className="sticky top-0 z-50 w-full bg-teal-600 border-b border-teal-700">
+        <nav className="sticky top-0 z-50 w-full bg-black border-b-3 border-black">
             <div className="flex flex-wrap items-center gap-4 py-4 px-6 sm:px-12 max-w-5xl mx-auto">
-                <Link href="/">
+                <Link href="/" className="no-underline">
                     <Image src={netlifyLogo} alt="Netlify logo" />
                 </Link>
                 {!!navItems?.length && (
-                    <ul className="flex flex-wrap gap-x-4 gap-y-1">
+                    <ul className="flex flex-wrap gap-x-1 gap-y-1">
                         {navItems.map((item, index) => (
                             <li key={index}>
                                 <Link
                                     href={item.href}
-                                    className="inline-block px-1.5 py-1 transition hover:opacity-80 sm:px-3 sm:py-2"
+                                    className="inline-block px-3 py-1.5 font-serif text-white no-underline uppercase text-sm tracking-wider hover:bg-accent hover:text-black transition-colors"
                                 >
                                     {item.linkText}
                                 </Link>
@@ -38,6 +38,7 @@ export function Header() {
                         href="https://github.com/netlify-templates/next-platform-starter"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="no-underline hover:opacity-80 transition"
                     >
                         <Image src={githubLogo} alt="GitHub logo" className="w-7" />
                     </Link>
