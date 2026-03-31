@@ -25,7 +25,7 @@ export function RandomQuote() {
     }, []);
 
     return (
-        <div className="bg-white card text-neutral-600">
+        <div className="bg-white card text-neutral-600 border-t-4 border-orange-500">
             <div className="card-body">
                 {quote ? (
                     <>

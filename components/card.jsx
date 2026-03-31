@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function Card({ title, text, linkText, href, children }) {
     return (
-        <div className="bg-white text-neutral-600 card">
+        <div className="bg-white text-neutral-600 card border-t-4 border-orange-500">
             <div className="card-body">
                 {title && <h3 className="text-neutral-900 card-title">{title}</h3>}
                 {text && <p>{text}</p>}
