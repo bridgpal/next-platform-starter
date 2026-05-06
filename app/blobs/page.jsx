@@ -40,7 +40,7 @@ User uploads are disabled in this site. To run your own and try it out:
 export default async function Page() {
     return (
         <>
-            <section className="flex flex-col gap-6 sm:gap-8">
+            <section className="flex flex-col gap-8 sm:gap-10">
                 <ContextAlert
                     addedChecksFunction={(ctx) => {
                         return uploadDisabled ? uploadDisabledText : null;
@@ -49,7 +49,7 @@ export default async function Page() {
                 <h1>Blobs x Blobs</h1>
             </section>
             {!!getNetlifyContext() && (
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-10">
                     <Markdown content={explainer} />
                     <ShapeEditor />
                 </div>

@@ -53,8 +53,8 @@ detection, so format is set to WebP.
 
 export default function Page() {
     return (
-        <div className="flex flex-col gap-6 sm:gap-12">
-            <section className="flex flex-col items-start gap-6 sm:gap-8">
+        <div className="flex flex-col gap-12 sm:gap-20">
+            <section className="flex flex-col items-start gap-8 sm:gap-10">
                 <ContextAlert addedChecksFunction={
                     (ctx) => {
                         return ctx === "dev" ? devModeWarning : null;
@@ -66,7 +66,7 @@ export default function Page() {
                 <h2 className="mb-4 text-2xl font-bold sm:text-3xl">Using next/image component</h2>
                 <Markdown content={nextImageSnippet} />
                 <div
-                    className="mt-8 overflow-hidden border-2 border-white rounded-lg relative max-w-screen-lg"
+                    className="mt-10 overflow-hidden border-2 border-orange-200 bg-white rounded-lg relative max-w-screen-lg shadow-xl shadow-orange-900/10"
                     style={{ aspectRatio: '3/2' }}
                 >
                     <Image
@@ -95,7 +95,7 @@ export default function Page() {
                     Original vs. optimized image: can you tell the difference?
                 </h2>
                 <Markdown content={originalVsCdnSnippet} />
-                <div className="diff aspect-[3/2] rounded-lg border-2 border-white mt-8">
+                <div className="diff aspect-[3/2] rounded-lg border-2 border-orange-200 bg-white mt-10 shadow-xl shadow-orange-900/10">
                     <div className="diff-item-1">
                         <div>
                             <ImageWithSizeOverlay

@@ -6,7 +6,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'grid-pattern': "linear-gradient(to bottom, theme('colors.neutral.950 / 0%'), theme('colors.neutral.950 / 100%')), url('/images/noise.png')"
+                'grid-pattern': "linear-gradient(135deg, theme('colors.orange.50 / 92%'), theme('colors.white / 96%') 46%, theme('colors.orange.100 / 92%')), url('/images/noise.png')"
             },
             colors: {
                 neutral: colors.neutral
@@ -21,11 +21,14 @@ module.exports = {
             {
                 lofi: {
                     ...require('daisyui/src/theming/themes')['lofi'],
-                    primary: '#2bdcd2',
-                    'primary-content': '#171717',
-                    secondary: '#016968',
-                    info: '#2bdcd2',
-                    'info-content': '#171717',
+                    primary: '#f97316',
+                    'primary-content': '#ffffff',
+                    secondary: '#c2410c',
+                    'secondary-content': '#ffffff',
+                    accent: '#fb923c',
+                    'accent-content': '#431407',
+                    info: '#ffedd5',
+                    'info-content': '#7c2d12',
                 }
             }
         ]

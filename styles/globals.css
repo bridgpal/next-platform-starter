@@ -5,18 +5,27 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        @apply text-orange-950 bg-orange-50;
+    }
+
     :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
+        @apply px-2 py-1 font-mono rounded bg-orange-950 text-orange-100;
         font-size: 0.9em;
     }
 
     h1 {
-        @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
+        @apply mb-8 text-4xl font-bold tracking-tight text-orange-950 md:text-5xl;
+    }
+
+    h2,
+    h3 {
+        @apply text-orange-950;
     }
 }
 
 a {
-    @apply underline
+    @apply underline decoration-orange-500 decoration-2 underline-offset-4 transition hover:text-orange-700
 }
 
 .markdown {
@@ -32,5 +41,21 @@ a {
 }
 
 .btn:disabled {
-    @apply text-neutral-400 bg-neutral-700;
+    @apply text-orange-200 bg-orange-900;
+}
+
+.btn-primary {
+    @apply border-orange-600 bg-orange-500 text-white shadow-lg shadow-orange-900/10 hover:border-orange-700 hover:bg-orange-600;
+}
+
+.card {
+    @apply rounded-lg border border-orange-200 shadow-xl shadow-orange-900/10;
+}
+
+.card-body {
+    @apply p-8 sm:p-10;
+}
+
+.alert {
+    @apply rounded-lg border border-orange-200 bg-orange-100 px-6 py-5 text-orange-950 shadow-md shadow-orange-900/5 sm:px-8;
 }
