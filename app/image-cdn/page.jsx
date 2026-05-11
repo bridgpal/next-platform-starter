@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Markdown } from 'components/markdown';
-import { getNetlifyContext } from 'utils';
+import { buildNetlifyImageUrl, getNetlifyContext } from 'utils';
 import { ImageWithSizeOverlay } from './image-with-size-overlay';
 import { ContextAlert } from 'components/context-alert';
 
@@ -107,7 +107,9 @@ export default function Page() {
                     </div>
                     <div className="diff-item-2">
                         <div>
-                            <ImageWithSizeOverlay src="/images/corgi.jpg" />
+                            <ImageWithSizeOverlay
+                                src={buildNetlifyImageUrl(sampleImage, { w: 2048, ...(forceWebP ? { fm: 'webp' } : {}) })}
+                            />
                         </div>
                     </div>
                     <div className="diff-resizer"></div>
