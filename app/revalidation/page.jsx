@@ -70,9 +70,9 @@ async function RandomWikiArticle() {
     }
 
     return (
-        <div className="bg-white text-neutral-600 card my-6 max-w-2xl">
-            <div className="card-title text-3xl px-8 pt-8">{content.title}</div>
-            <div className="card-body py-4">
+        <div className="bg-white text-orange-950 card my-10 max-w-2xl">
+            <div className="card-title text-3xl px-10 pt-10">{content.title}</div>
+            <div className="card-body pt-5">
                 <div className="text-lg font-bold">{content.description}</div>
                 <p className="italic">{extract}</p>
                 <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>

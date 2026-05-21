@@ -2,12 +2,12 @@ import blobshape from 'blobshape';
 import { randomInt, uniqueName } from 'utils';
 
 const gradientColors = [
-    ['#e96443', '#904e95'],
-    ['#ff5f6d', '#ffc371'],
-    ['#eecda3', '#ef629f'],
-    ['#4ca1af', '#c4e0e5'],
-    ['#c2e59c', '#64b3f4'],
-    ['#3ca55c', '#b5ac49']
+    ['#f97316', '#fff7ed'],
+    ['#fb923c', '#ffedd5'],
+    ['#ea580c', '#ffffff'],
+    ['#fdba74', '#c2410c'],
+    ['#ffedd5', '#f97316'],
+    ['#ffffff', '#fb923c']
 ];
 
 export const fixedSize = 512;
