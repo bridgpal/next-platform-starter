@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,21 +6,43 @@
 
 @layer base {
     :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
+        @apply px-1.5 py-0.5 font-mono rounded border border-axa-line bg-axa-mist text-axa-blue;
         font-size: 0.9em;
     }
 
     h1 {
-        @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
+        @apply mb-6 text-3xl font-bold tracking-tight text-axa-blue md:text-5xl;
+    }
+
+    h2 {
+        @apply text-axa-ink;
+    }
+
+    h3 {
+        @apply text-axa-ink;
+    }
+
+    p {
+        @apply leading-relaxed;
+    }
+
+    /* Accessible, high-contrast focus state for all interactive elements */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    [tabindex]:focus-visible {
+        outline: 3px solid #1144dd;
+        outline-offset: 2px;
+        border-radius: 2px;
     }
 }
 
 a {
-    @apply underline
+    @apply text-axa-bright underline underline-offset-2 transition-colors hover:text-axa-blue;
 }
 
 .markdown {
-    @apply mb-1;
+    @apply mb-1 text-axa-slate;
 }
 
 .alert .markdown {
@@ -31,6 +53,10 @@ a {
     @apply mb-3;
 }
 
+.btn {
+    @apply font-semibold normal-case tracking-normal;
+}
+
 .btn:disabled {
-    @apply text-neutral-400 bg-neutral-700;
+    @apply text-neutral-400 bg-neutral-200;
 }

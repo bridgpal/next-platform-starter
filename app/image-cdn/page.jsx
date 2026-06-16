@@ -63,10 +63,10 @@ export default function Page() {
                 <h1 className="mb-0">Image CDN</h1>
             </section>
             <section>
-                <h2 className="mb-4 text-2xl font-bold sm:text-3xl">Using next/image component</h2>
+                <h2 className="mb-4 text-2xl font-bold text-axa-ink sm:text-3xl">Using next/image component</h2>
                 <Markdown content={nextImageSnippet} />
                 <div
-                    className="mt-8 overflow-hidden border-2 border-white rounded-lg relative max-w-screen-lg"
+                    className="mt-8 overflow-hidden border border-axa-line rounded-lg relative max-w-screen-lg"
                     style={{ aspectRatio: '3/2' }}
                 >
                     <Image
@@ -91,11 +91,11 @@ export default function Page() {
             </section>
 
             <section>
-                <h2 className="mb-4 text-2xl font-bold sm:text-3xl">
+                <h2 className="mb-4 text-2xl font-bold text-axa-ink sm:text-3xl">
                     Original vs. optimized image: can you tell the difference?
                 </h2>
                 <Markdown content={originalVsCdnSnippet} />
-                <div className="diff aspect-[3/2] rounded-lg border-2 border-white mt-8">
+                <div className="diff aspect-[3/2] rounded-lg border border-axa-line mt-8">
                     <div className="diff-item-1">
                         <div>
                             <ImageWithSizeOverlay
