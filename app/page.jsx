@@ -29,14 +29,17 @@ const ctx = getNetlifyContext();
 
 export default function Page() {
     return (
-        <main className="flex flex-col gap-8 sm:gap-16">
-            <section className="flex flex-col items-start gap-3 sm:gap-4">
+        <main className="flex flex-col gap-10 sm:gap-16">
+            <section className="flex flex-col items-start gap-5 rounded-xl border border-axa-line bg-white p-8 shadow-card sm:p-12">
                 <ContextAlert />
+                <span className="inline-flex items-center rounded-full bg-axa-mist px-3 py-1 text-sm font-semibold text-axa-blue">
+                    Next.js on Netlify
+                </span>
                 <h1 className="mb-0">Netlify Platform Starter - Next.js</h1>
-                <p className="text-lg">Get started with Next.js and Netlify in seconds! 2026</p>
+                <p className="max-w-2xl text-lg text-axa-slate">Get started with Next.js and Netlify in seconds! 2026</p>
                 <Link
                     href="https://docs.netlify.com/frameworks/next-js/overview/"
-                    className="btn btn-lg btn-primary sm:btn-wide"
+                    className="btn btn-lg btn-primary no-underline sm:btn-wide"
                 >
                     Read the Docs
                 </Link>

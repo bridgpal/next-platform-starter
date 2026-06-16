@@ -70,10 +70,10 @@ async function RandomWikiArticle() {
     }
 
     return (
-        <div className="bg-white text-neutral-600 card my-6 max-w-2xl">
-            <div className="card-title text-3xl px-8 pt-8">{content.title}</div>
+        <div className="bg-white text-axa-slate border border-axa-line rounded-lg shadow-card card my-6 max-w-2xl">
+            <div className="card-title text-3xl text-axa-blue px-8 pt-8">{content.title}</div>
             <div className="card-body py-4">
-                <div className="text-lg font-bold">{content.description}</div>
+                <div className="text-lg font-bold text-axa-ink">{content.description}</div>
                 <p className="italic">{extract}</p>
                 <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>
                     From Wikipedia
