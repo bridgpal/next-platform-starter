@@ -12,7 +12,8 @@ module.exports = {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['Merriweather', ...defaultTheme.fontFamily.serif],
+                serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
             }
         }
     },
