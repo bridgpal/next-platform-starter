@@ -14,18 +14,18 @@ const navItems = [
 
 export function Header() {
     return (
-        <nav className="sticky top-0 z-50 w-full bg-teal-600 border-b border-teal-700">
+        <nav className="sticky top-0 z-50 w-full text-white bg-teal-600 border-b border-teal-700/60 shadow-sm">
             <div className="flex flex-wrap items-center gap-4 py-4 px-6 sm:px-12 max-w-5xl mx-auto">
-                <Link href="/">
+                <Link href="/" className="no-underline">
                     <Image src={netlifyLogo} alt="Netlify logo" />
                 </Link>
                 {!!navItems?.length && (
-                    <ul className="flex flex-wrap gap-x-4 gap-y-1">
+                    <ul className="flex flex-wrap gap-x-1 gap-y-1 text-sm">
                         {navItems.map((item, index) => (
                             <li key={index}>
                                 <Link
                                     href={item.href}
-                                    className="inline-block px-1.5 py-1 transition hover:opacity-80 sm:px-3 sm:py-2"
+                                    className="inline-block px-1.5 py-1 no-underline rounded transition hover:bg-white/15 sm:px-3 sm:py-2"
                                 >
                                     {item.linkText}
                                 </Link>
