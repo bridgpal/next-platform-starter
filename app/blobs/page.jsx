@@ -33,7 +33,7 @@ Choose any existing object to view it.
 const uploadDisabledText = `
 User uploads are disabled in this site. To run your own and try it out: 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter">
-<img src="https://www.netlify.com/img/deploy/button.svg" style="display: inline;" alt="Deploy to Netlify" />
+<img src="/.netlify/images?url=https%3A%2F%2Fwww.netlify.com%2Fimg%2Fdeploy%2Fbutton.svg&w=220" style="display: inline;" alt="Deploy to Netlify" />
 </a>
 `;
 

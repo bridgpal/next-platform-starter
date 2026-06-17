@@ -24,6 +24,21 @@ export function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+export function buildNetlifyImageUrl(src, options = {}) {
+    if (!src || src.startsWith('/.netlify/images') || src.startsWith('data:') || src.startsWith('blob:')) {
+        return src;
+    }
+
+    const params = new URLSearchParams({ url: src });
+    Object.entries(options).forEach(([key, value]) => {
+        if (value !== undefined && value !== null && value !== '') {
+            params.set(key, `${value}`);
+        }
+    });
+
+    return `/.netlify/images?${params.toString()}`;
+}
+
 const uniqueNamesConfig = {
     dictionaries: [adjectives, animals],
     separator: '-',

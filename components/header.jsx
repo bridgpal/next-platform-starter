@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import netlifyLogo from 'public/netlify-logo.svg';
-import githubLogo from 'public/images/github-mark-white.svg';
+import { buildNetlifyImageUrl } from 'utils';
 
 const navItems = [
     { linkText: 'Home', href: '/' },
@@ -17,7 +15,12 @@ export function Header() {
         <nav className="sticky top-0 z-50 w-full bg-teal-600 border-b border-teal-700">
             <div className="flex flex-wrap items-center gap-4 py-4 px-6 sm:px-12 max-w-5xl mx-auto">
                 <Link href="/">
-                    <Image src={netlifyLogo} alt="Netlify logo" />
+                    <img
+                        src={buildNetlifyImageUrl('/netlify-logo.svg')}
+                        alt="Netlify logo"
+                        width="122"
+                        height="50"
+                    />
                 </Link>
                 {!!navItems?.length && (
                     <ul className="flex flex-wrap gap-x-4 gap-y-1">
@@ -39,7 +42,13 @@ export function Header() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Image src={githubLogo} alt="GitHub logo" className="w-7" />
+                        <img
+                            src={buildNetlifyImageUrl('/images/github-mark-white.svg')}
+                            alt="GitHub logo"
+                            width="98"
+                            height="96"
+                            className="w-7 h-auto"
+                        />
                     </Link>
                 </div>
             </div>

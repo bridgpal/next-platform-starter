@@ -1,11 +1,33 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { getResourceSize } from 'utils';
+import { buildNetlifyImageUrl, getResourceSize } from 'utils';
+
+function normalizeSrcSet(srcSet) {
+    if (!srcSet) {
+        return srcSet;
+    }
+
+    return srcSet
+        .split(',')
+        .map((candidate) => {
+            const trimmedCandidate = candidate.trim();
+            if (!trimmedCandidate) {
+                return trimmedCandidate;
+            }
+
+            const [src, descriptor] = trimmedCandidate.split(/\s+/, 2);
+            const normalizedSrc = buildNetlifyImageUrl(src);
+            return descriptor ? `${normalizedSrc} ${descriptor}` : normalizedSrc;
+        })
+        .join(', ');
+}
 
 export function ImageWithSizeOverlay({ src, srcSet, sizes, overlayPosition }) {
     const imageRef = useRef();
     const [imgSize, setImgSize] = useState(undefined);
+    const normalizedSrc = buildNetlifyImageUrl(src);
+    const normalizedSrcSet = normalizeSrcSet(srcSet);
 
     const handleImageLoad = useCallback(() => {
         const imgElement = imageRef.current;
@@ -31,7 +53,14 @@ export function ImageWithSizeOverlay({ src, srcSet, sizes, overlayPosition }) {
                 >{`Size: ${Math.ceil(imgSize / 1024)}KB`}</span>
             )}
 
-            <img src={src} srcSet={srcSet} sizes={sizes} alt="Corgi" onLoad={handleImageLoad} ref={imageRef} />
+            <img
+                src={normalizedSrc}
+                srcSet={normalizedSrcSet}
+                sizes={sizes}
+                alt="Corgi"
+                onLoad={handleImageLoad}
+                ref={imageRef}
+            />
         </div>
     );
 }

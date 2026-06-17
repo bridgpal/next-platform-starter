@@ -2,6 +2,11 @@
 publish = ".next"
 command = "npm run build"
 
+[images]
+remote_images = [
+  "https://www\\.netlify\\.com/.*"
+]
+
 
 [[redirects]]
 from = "/de/*"
