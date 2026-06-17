@@ -6,13 +6,18 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'grid-pattern': "linear-gradient(to bottom, theme('colors.neutral.950 / 0%'), theme('colors.neutral.950 / 100%')), url('/images/noise.png')"
+                'grid-pattern':
+                    "radial-gradient(70% 55% at 12% -5%, rgba(43,220,210,0.14) 0%, transparent 70%), linear-gradient(to bottom, rgba(250,250,249,0) 0%, rgba(250,250,249,0.92) 92%), linear-gradient(to right, rgba(1,105,104,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(1,105,104,0.06) 1px, transparent 1px)"
+            },
+            backgroundSize: {
+                grid: 'auto, auto, 28px 28px, 28px 28px'
             },
             colors: {
                 neutral: colors.neutral
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+                mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
             }
         }
     },

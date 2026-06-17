@@ -25,23 +25,29 @@ export function RandomQuote() {
     }, []);
 
     return (
-        <div className="bg-white card text-neutral-600">
-            <div className="card-body">
+        <div className="overflow-hidden bg-white border rounded-xl border-neutral-200">
+            <div className="p-6 sm:p-8">
                 {quote ? (
                     <>
-                        <h3 className="text-xl text-neutral-900 font-bold">&ldquo;{quote.text}&rdquo;</h3>
-                        <p>
+                        <h3 className="text-xl font-bold leading-snug text-neutral-900">
+                            <span className="text-teal-500">&ldquo;</span>
+                            {quote.text}
+                            <span className="text-teal-500">&rdquo;</span>
+                        </h3>
+                        <p className="mt-2 text-neutral-600">
                             {' '}
                             - {quote.playedBy} as {quote.character} in &ldquo;{quote.film}&rdquo; ({quote.year})
                         </p>
-                        <p className="pt-2.5 mt-2.5 border-t border-dashed text-secondary border-neutral-200">
+                        <p className="pt-2.5 mt-4 border-t border-dashed border-neutral-200 text-teal-700">
                             <span className="text-sm italic">
                                 loaded at {time}. <a href={quote.dataSource}>Original data source.</a>
                             </span>
                         </p>
                     </>
                 ) : (
-                    <div className="card-body">Loading...</div>
+                    <p className="text-sm text-neutral-400">
+                        <span className="text-teal-500">$</span> fetching quote...
+                    </p>
                 )}
             </div>
         </div>
