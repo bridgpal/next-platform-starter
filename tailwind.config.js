@@ -21,11 +21,11 @@ module.exports = {
             {
                 lofi: {
                     ...require('daisyui/src/theming/themes')['lofi'],
-                    primary: '#2bdcd2',
-                    'primary-content': '#171717',
-                    secondary: '#016968',
-                    info: '#2bdcd2',
-                    'info-content': '#171717',
+                    primary: '#2563eb',
+                    'primary-content': '#ffffff',
+                    secondary: '#ea580c',
+                    info: '#3b82f6',
+                    'info-content': '#ffffff',
                 }
             }
         ]
